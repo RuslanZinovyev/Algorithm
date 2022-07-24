@@ -19,7 +19,7 @@ public class LinkedListAlgorithm {
         node5.next = node6;
 
         customLinkedList.displayObjects();
-        customLinkedList.deleteKthNode(1);
+        customLinkedList.deleteKthNode(7);
         customLinkedList.displayObjects();
 
 

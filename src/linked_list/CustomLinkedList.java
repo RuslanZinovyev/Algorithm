@@ -55,7 +55,7 @@ public class CustomLinkedList {
         int shift = this.size() - k;
         Node currentNode = head;
 
-        if (k >= this.size()) return;
+        if (k > this.size()) return;
 
         while (currentNode != null) {
             if (shift == 0) {
