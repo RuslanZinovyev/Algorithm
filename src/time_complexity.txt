@@ -5,5 +5,5 @@ Big-O notations:
 O(1) - Constant time
 O(log(n)) - Logarithmic time
 O(n) - Linear time
-O(n^2) - exponential time
+O(n^2) - quadratic time
 O(n!) - factorial time

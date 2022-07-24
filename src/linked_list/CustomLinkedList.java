@@ -50,24 +50,49 @@ public class CustomLinkedList {
     /*
         Delete the Kth node from the end of the list
      */
+//    public void deleteKthNode(int k) {
+//        int count = 0;
+//        int shift = this.size() - k;
+//        Node currentNode = head;
+//
+//        if (k > this.size()) return;
+//
+//        while (currentNode != null) {
+//            if (shift == 0) {
+//                head = currentNode.next;
+//                break;
+//            }
+//            count++;
+//            if (count == shift) {
+//                currentNode.next = currentNode.next.next;
+//            }
+//            currentNode = currentNode.next;
+//        }
+//    }
+
     public void deleteKthNode(int k) {
-        int count = 0;
-        int shift = this.size() - k;
-        Node currentNode = head;
+        if (head == null || k == 0) return;
 
-        if (k > this.size()) return;
+        Node first = head;
+        Node second = head;
 
-        while (currentNode != null) {
-            if (shift == 0) {
-                head = currentNode.next;
-                break;
+        for (int i = 0; i < k; i++) {
+            if (second.next == null) {
+                // K >= length of the list
+                if (i == k - 1) {
+                    head = head.next;
+                }
+                return;
             }
-            count++;
-            if (count == shift) {
-                currentNode.next = currentNode.next.next;
-            }
-            currentNode = currentNode.next;
+            second = second.next;
         }
+
+        while (second.next != null) {
+            first = first.next;
+            second = second.next;
+        }
+
+        first.next = first.next.next;
     }
 
     /*

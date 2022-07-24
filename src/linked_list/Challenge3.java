@@ -44,38 +44,20 @@ public class Challenge3 {
         example1.displayObjects();
         System.out.println();
 
-        CustomLinkedList example2 = new CustomLinkedList();
-        CustomLinkedList.Node node6 = new CustomLinkedList.Node(5);
-        CustomLinkedList.Node node7 = new CustomLinkedList.Node(7);
-        CustomLinkedList.Node node8 = new CustomLinkedList.Node(11);
-        CustomLinkedList.Node node9 = new CustomLinkedList.Node(2);
-        example2.head = node6;
-        node6.next = node7;
-        node7.next = node8;
-        node8.next = node9;
-
         System.out.print("Original list: ");
-        example2.displayObjects();
+        example1.displayObjects();
         System.out.println("removed fourth element from the end");
-        example2.deleteKthNode(4);
+        example1.deleteKthNode(4);
         System.out.print("Resulted list: ");
-        example2.displayObjects();
+        example1.displayObjects();
         System.out.println();
 
-        CustomLinkedList example3 = new CustomLinkedList();
-        CustomLinkedList.Node node10 = new CustomLinkedList.Node(7);
-        CustomLinkedList.Node node11 = new CustomLinkedList.Node(11);
-        CustomLinkedList.Node node12 = new CustomLinkedList.Node(2);
-        example3.head = node10;
-        node10.next = node11;
-        node11.next = node12;
-
         System.out.print("Original list: ");
-        example3.displayObjects();
+        example1.displayObjects();
         System.out.println("removed second element from the end");
-        example3.deleteKthNode(2);
+        example1.deleteKthNode(2);
         System.out.print("Resulted list: ");
-        example3.displayObjects();
+        example1.displayObjects();
         System.out.println();
     }
 }
