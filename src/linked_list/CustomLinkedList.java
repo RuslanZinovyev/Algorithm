@@ -1,7 +1,5 @@
 package linked_list;
 
-import java.util.Objects;
-
 public class CustomLinkedList {
     // inner class
     public static class Node {
@@ -29,7 +27,7 @@ public class CustomLinkedList {
     }
 
     /*
-        delete the second part of the Linked List
+        Delete the second part of the Linked List
      */
     public void deleteBackHalf() {
         if (head == null || head.next == null) {
@@ -47,6 +45,38 @@ public class CustomLinkedList {
         }
 
         prev.next = null;
+    }
+
+    /*
+        Delete the Kth node from the end of the list
+     */
+    public void deleteKthNode(int k) {
+        int count = 0;
+        int shift = this.size() - k;
+        Node currentNode = head;
+
+        if (k >= this.size()) head = null;
+
+        while (currentNode != null) {
+            count++;
+            if (count == shift) {
+                currentNode.next = null;
+            }
+            currentNode = currentNode.next;
+        }
+    }
+
+    /*
+        This method just return size of the linked list
+     */
+    public int size() {
+        int result = 0;
+        Node currentNode = head;
+        while (currentNode != null) {
+            result++;
+            currentNode = currentNode.next;
+        }
+        return result;
     }
 
 }

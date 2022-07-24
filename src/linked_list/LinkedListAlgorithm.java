@@ -19,8 +19,9 @@ public class LinkedListAlgorithm {
         node5.next = node6;
 
         customLinkedList.displayObjects();
-        customLinkedList.deleteBackHalf();
+        customLinkedList.deleteKthNode(1);
         customLinkedList.displayObjects();
+
 
     }
 }
