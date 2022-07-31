@@ -7,6 +7,7 @@ public class BinarySearch {
         System.out.println(binarySearch(arr, 17));
         System.out.println(binarySearch(arr, 7));
         System.out.println(binarySearch(arr, 1));
+        System.out.println(binarySearch(arr, 0));
     }
 
     public static boolean binarySearch(int[] arr, int item) {
@@ -20,7 +21,7 @@ public class BinarySearch {
             } else if (item > arr[mid]) {
                 min = mid + 1;
             } else {
-                max = mid + 1;
+                max = mid - 1;
             }
         }
         return false;
