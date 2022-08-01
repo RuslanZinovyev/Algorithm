@@ -1,17 +1,20 @@
 package linked_list;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CustomLinkedList {
     // inner class
     public static class Node {
         int date;
-        Node next;
+        public Node next;
 
         public Node(int date) {
             this.date = date;
         }
     }
 
-    Node head;
+    public Node head;
 
     /*
         Display nodes
@@ -86,6 +89,27 @@ public class CustomLinkedList {
             currentNode = currentNode.next;
         }
         return result;
+    }
+
+    /*
+        Check if the current linked list is cycled
+     */
+    public boolean hasCycle() {
+        Set<Node> nodes = new HashSet<>();
+        Node current = head;
+        if (current != null) {
+            nodes.add(current);
+            Node currentNode = current.next;
+            while (currentNode != null) {
+                if (nodes.contains(currentNode)) {
+                    return true;
+                } else {
+                    nodes.add(currentNode);
+                }
+                currentNode = currentNode.next;
+            }
+        }
+        return false;
     }
 
 }
