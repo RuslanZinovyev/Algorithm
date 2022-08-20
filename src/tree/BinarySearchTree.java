@@ -22,6 +22,27 @@ public class BinarySearchTree {
         return root;
     }
 
+    public boolean isElementExist(int data) {
+       return isElementExist(root, data);
+    }
+
+    private boolean isElementExist(Node node, int data) {
+        if (node == null) {
+            return false;
+        }
+
+        if (data < node.data) {
+            return isElementExist(node.left, data);
+        }
+
+        if (data > node.data) {
+            return isElementExist(node.right, data);
+        }
+
+        return true;
+
+    }
+
     public void preOrderTraversal() {
         preOrderTraversal(this.root);
     }

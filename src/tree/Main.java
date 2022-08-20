@@ -11,7 +11,11 @@ public class Main {
         tree.insert(1);
         tree.insert(3);
         tree.insert(4);
+        tree.insert(54);
+        tree.insert(34);
+        tree.insert(65);
+        tree.insert(14);
 
-        tree.preOrderTraversal();
+        System.out.println(tree.isElementExist(35));
     }
 }
